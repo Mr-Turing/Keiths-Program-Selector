@@ -1,0 +1,32 @@
+app_title: "NC Program Generator"
+app_description: "Select component features to generate your G-code file."
+
+# Define your input features here
+features:
+  - id: "material"
+    label: "Material Type"
+    type: "selectbox" # options: selectbox, radio
+    options: ["Aluminum 6061", "Steel 1018", "Stainless 304", "Delrin"]
+
+  - id: "diameter"
+    label: "Stock Diameter (mm)"
+    type: "slider"
+    min: 10
+    max: 200
+    default: 50
+    step: 5
+
+  - id: "operations"
+    label: "Machine Operations"
+    type: "multiselect"
+    options: ["Face", "Turn OD", "Drill Center", "Thread", "Part Off"]
+
+  - id: "coolant"
+    label: "Coolant Mode"
+    type: "radio"
+    options: ["Flood", "Mist", "Through-Spindle", "Off"]
+
+  - id: "comments"
+    label: "Add Setup Comments?"
+    type: "checkbox"
+    default: true
